@@ -725,45 +725,46 @@
   /*--------------------------------------------------------------
     22. Cursor Animation
   --------------------------------------------------------------*/
-  $(function () {
-    $('body').append('<span class="cs-cursor_lg d"></span>');
-    $('body').append('<span class="cs-cursor_sm"></span>');
-    $(
-      '.cs-text_btn, .cs-site_header a, .cs-down_btn, .cs-social_btns a, .cs-menu_widget',
-    ).on('mouseenter', function () {
-      $('.cs-cursor_lg').addClass('opacity-0');
-      $('.cs-cursor_sm').addClass('opacity-0');
-    });
-    $(
-      '.cs-text_btn, .cs-site_header a, .cs-down_btn, .cs-social_btns a, .cs-menu_widget',
-    ).on('mouseleave', function () {
-      $('.cs-cursor_lg').removeClass('opacity-0');
-      $('.cs-cursor_sm').removeClass('opacity-0');
-    });
-  });
-  function cursorMovingAnimation(event) {
-    try {
-      const timing = gsap.timeline({
-        defaults: {
-          x: event.clientX,
-          y: event.clientY,
-        },
-      });
+  // $(function () {
+  //   $('body').append('<span class="cs-cursor_lg d"></span>');
+  //   $('body').append('<span class="cs-cursor_sm"></span>');
+  //   $(
+  //     '.cs-text_btn, .cs-site_header a, .cs-down_btn, .cs-social_btns a, .cs-menu_widget',
+  //   ).on('mouseenter', function () {
+  //     $('.cs-cursor_lg').addClass('opacity-0');
+  //     $('.cs-cursor_sm').addClass('opacity-0');
+  //   });
+  //   $(
+  //     '.cs-text_btn, .cs-site_header a, .cs-down_btn, .cs-social_btns a, .cs-menu_widget',
+  //   ).on('mouseleave', function () {
+  //     $('.cs-cursor_lg').removeClass('opacity-0');
+  //     $('.cs-cursor_sm').removeClass('opacity-0');
+  //   });
+  // });
+  // function cursorMovingAnimation(event) {
+  //   try {
+  //     const timing = gsap.timeline({
+  //       defaults: {
+  //         x: event.clientX,
+  //         y: event.clientY,
+  //       },
+  //     });
 
-      timing
-        .to('.cs-cursor_lg', {
-          ease: 'power2.out',
-        })
-        .to(
-          '.cs-cursor_sm',
-          {
-            ease: 'power2.out',
-          },
-          '-=0.4',
-        );
-    } catch (err) {
-      console.log(err);
-    }
-  }
-  document.addEventListener('mousemove', cursorMovingAnimation);
-})(jQuery); // End of use strict
+  //     timing
+  //       .to('.cs-cursor_lg', {
+  //         ease: 'power2.out',
+  //       })
+  //       .to(
+  //         '.cs-cursor_sm',
+  //         {
+  //           ease: 'power2.out',
+  //         },
+  //         '-=0.4',
+  //       );
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+  // document.addEventListener('mousemove', cursorMovingAnimation);
+})
+(jQuery); // End of use strict
