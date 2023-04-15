@@ -1431,6 +1431,7 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 -20px;
+  margin-bottom: -110px;
 }
 
 .cs-partner_logo {
@@ -7375,6 +7376,7 @@ ul:not(.cs-mega_wrapper)
 
 .cs-funfact_wrap.cs-type1 {
   margin-top: -130px;
+  margin-bottom: 50px;
 }
 
 .cs-funfact_heading h2 {
